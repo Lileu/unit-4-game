@@ -12,6 +12,6 @@ jQuery assignment
 4. jQuery
 
 ## Stuff I used
-* css reset file
+* css reset file (Meyerweb Reset)
 
 ## Stuff I learned
