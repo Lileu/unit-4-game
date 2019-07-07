@@ -1,10 +1,10 @@
-WEEK 4 Homework
 
-# unit-4-game
+
+# WEEK 4 Homework: unit-4-game
+## Option One: CrystalsCollector Game
 jQuery assignment
 
-# Option One: CrystalsCollector Game
- https://lileu.github.io/unit-4-game/
+https://lileu.github.io/unit-4-game/
 
 ## Built with
 1. HTML
