@@ -4,6 +4,7 @@ WEEK 4 Homework
 jQuery assignment
 
 # Option One: CrystalsCollector Game
+ https://lileu.github.io/unit-4-game/
 
 ## Built with
 1. HTML
