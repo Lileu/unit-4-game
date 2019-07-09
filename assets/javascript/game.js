@@ -1,31 +1,36 @@
-
-
-//* The random number shown at the start of the game should be between 19 - 120.
-
-//* Each crystal should have a random hidden value between 1 - 12.
-
-$(document).ready(function() {
+//$(document).ready(function() {
 // GLOBAL VARIABLES
 
-// Scores
-var currentScore = 0;
-var winScore = 0;
+var currentScore = 0; //#
+var winScore = 0; //#
+var winCount = 0; //#win-count
+var lossCount = 0; //#loss-count
 
-// Wins and Losses
-var winCount = 0;
-var lossCount = 0;
+var iconsArr = ["#crystal1","#crystal2","#crystal3","#crystal4"]  //
 
-var crystalIcons = ["#crystal1","#crystal2","#crystal3","#crystal4"]  
-
-var goalNumber = Math.floor(Math.random() * (120) + 19)
-$("#goal-number").text(randomNumber);  
+var goalValue = Math.floor(Math.random() * (120) + 19); //random "#goal-number"
+$("#goal-number").text(goalValue);  
 
 
-var crystalNumbers = Math.floor(Math.random() * (11) + 1)
+var crystalValuesArr = [Math.floor(Math.random() * (11) + 1), Math.floor(Math.random() * (11) + 1), Math.floor(Math.random() * (11) + 1), Math.floor(Math.random() * (11) + 1)];
 
 
 // FUNCTIONS
 
+// For-loop to iterate through the crystal icons array.
+for (i = 0; i < crystalValuesArr.length; i++) {
 
+    // 2. Create a variable named "crystalBtn" equal to the icon
+    var crystalBtn = $("<i>");
 
-// MAIN PROCESS
+    crystalBtn.addClass("crystal-icon"); // assigning a new class
+
+    // 4. Then give each "crystalBtn" a data-attribute called "data-crystalValue".
+    crystalBtn.attr("data-crystalValue", crystalValuesArr.length[i]);
+
+    // 6. Finally, append each "letterBtn" to the "#buttons" div (provided).
+    $("#buttons").append(crystalBtn);
+
+    //console.log($(this));
+   // console.log(this);
+}
