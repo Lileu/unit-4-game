@@ -5,73 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <script src="https://kit.fontawesome.com/16b6c2968f.js"></script>
 
+    
     <link rel="stylesheet" href="assets/css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <title>Crystals Collector Game</title>
+        
+        <title>Crystals Collector Game</title>
 </head>
 
 <body>
-    <header>
+
+
+
+    <div class="jumbotron jumbotron-fluid text-center mdb-color lighten-2 white-text mx-2 mb-5">
+        <div class="main-section">
         <h1>Crystals Collector Game</h1>
-    </header>
-    <div id="main-container" class="container">
-        <div class="row">
-            <div class="col-md-12 instructions">
-                <div class="main-section">
+
+            <div class="row">
+                <div class="col-md-12 instructions">
+                    <h2>Instructions</h2>
+                    <br>
+                    <p>You will be given a random number at the start of the game.</p>
+                    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of
+                        points
+                        to your total score.</p>
+                    <p>You win the game by matching your total score to a random number. You lose the game if
+                        your total
+                        score goes above the random number.</p>
+                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                    <p>Each time the game starts, the values of each crystal will change as well!</p>
+
+                      <hr class="my-4 rgba-white-light">
+                    <!-- Score/Wins and Losses counter -->
+                    <div class="row"></div>
+
+                    <div class="col-md 3"></div>
+                    <div id="goal-number"></div>
+
+                    <div class="col-md 3"></div>
+                    <div id="score">
+
+                    <div class="col-md 1"></div>
+                    <div id="space"></div>
+
+                    <div class="col-md 4"></div>
+                    <div id="wins-and-losses"></div>
+
+                    <hr class="my-4 rgba-white-light">
+                    <!-- row of crystals -->
                     <div class="row">
-                        <div class="col-md-12 instructions">
-                            <h2>Instructions</h2>
-                            <br>
-                            <p>You will be given a random number at the start of the game.</p>
-                            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of
-                                points
-                                to your total score.</p>
-                            <p>You win the game by matching your total score to a random number. You lose the game if
-                                your total
-                                score goes above the random number.</p>
-                            <p>The value of each crystal is hidden from you until you click on it.</p>
-                            <p>Each time the game starts, the values of each crystal will change as well!</p>
-
-
-                            <!-- Score/Wins and Losses counter -->
-                            <div class="row"></div>
-                            <div class="col-md 3"></div>
-                            <div id="score"></div>
-
-                            <div class="col-md 1"></div>
-                            <div id="space"></div>
-
-                            <div class="col-md 4"></div>
-                            <div id="winsAndLosses"></div>
-
-                            <!-- row of crystals -->
-                            <div class="row">
-                                <div class="col-md-3"><img class="crystalImage" src="assets/images/blue-crystal.svg"
-                                        alt="blue crystal1" id="crystal1"></div>
-                                <div class="col-md-3"><img class="crystalImage" src="assets/images/yellow-crystal.svg"
-                                        alt="yellow crystal2" id="crystal2"></div>
-                                <div class="col-md-3"><img class="crystalImage" src="assets/images/purple-crystal.svg"
-                                        alt="purple crystal3" id="crystal3"></div>
-                                <div class="col-md-3"><img class="crystalImage" src="assets/images/green-crystal.svg"
-                                        alt="green crystal4" id="crystal4"></div>
-                            </div>
-                        </div>
+                        <div class="col-md-3"><i id="crystal1" class="far fa-gem fa-5x"></i></div>
+                        <div class="col-md-3"><i id="crystal2" class="far fa-gem fa-5x"></i></div>
+                        <div class="col-md-3"><i id="crystal3" class="far fa-gem fa-5x"></i></div>
+                        <div class="col-md-3"><i id="crystal4" class="far fa-gem fa-5x"></i></div>
                     </div>
                 </div>
+                <!-- </div>
+                </div> -->
             </div>
+        </div>
 
-            <footer class="footer mt-auto py-3">
-                <div class="container">
-                    <span class="text-muted">Week 4 homework</span>
-                </div>
-            </footer>
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <span class="text-muted">Week 4 homework</span>
+            </div>
+        </footer>
 
-            <script type="text/javascript" src="../assets/javascript/game.js"></script>
+        <script type="text/javascript" src="../assets/javascript/game.js"></script>
 </body>
 
 </html>

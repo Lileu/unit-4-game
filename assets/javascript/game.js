@@ -12,17 +12,20 @@ var currentScore = 0;
 var winScore = 0;
 
 // Wins and Losses
-var winCont = 0;
+var winCount = 0;
 var lossCount = 0;
 
-var imagesArr = ["assets/images/blue-crystal.svg","assets/images/yellow-crystal.svg","assets/images/purple-crystal.svg","assets/images/green-crystal.svg"]  
-]
+var crystalIcons = ["#crystal1","#crystal2","#crystal3","#crystal4"]  
 
+var goalNumber = Math.floor(Math.random() * (120) + 19)
+$("#goal-number").text(randomNumber);  
+
+
+var crystalNumbers = Math.floor(Math.random() * (11) + 1)
 
 
 // FUNCTIONS
-function randomCrystal
-Math.floor(Math.random() * (12 - 1)) + 1
+
 
 
 // MAIN PROCESS

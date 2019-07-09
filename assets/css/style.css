@@ -8,11 +8,16 @@ header {
     text-align: center;
 }
 
+footer {
+    padding: 30px 0;
+    clear: both;
+    text-align: center;
 
-.main-section {
+  }
+
+.jumbotron {
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-    color: whitesmoke;
-    padding: 20px 15px;
+
 
 
 }
@@ -23,9 +28,22 @@ padding: 15px 20px;
 
 }
 
+.fa-gem {
+ opacity: 0.8;
+}
 
-.crystalImage {
-    height: 120px;
-    width: 150px;
-    margin: 0 auto;
+
+#crystal1 {
+    color: #A0DC00;
+}
+#crystal2 {
+    color: #F0008C;
+}
+#crystal3  {
+    color: #00C7FF;
+}
+
+
+#crystal4 {
+    color: #FFBE00;
 }
