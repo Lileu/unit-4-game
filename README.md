@@ -14,5 +14,7 @@ https://lileu.github.io/unit-4-game/
 
 ## Stuff I used
 * css reset file (Meyerweb Reset)
+* Font Awesome gem icon
 
 ## Stuff I learned
+* 
