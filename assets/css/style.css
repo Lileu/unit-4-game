@@ -1,12 +1,19 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background-color: black;
+    
+}
 
+header {
+    text-align: center;
 }
 
 
 .main-section {
-    background-color: white;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    color: whitesmoke;
+    padding: 20px 15px;
+
 
 }
 
@@ -14,4 +21,11 @@ body {
 margin: auto;
 padding: 15px 20px;
 
+}
+
+
+.crystalImage {
+    height: 120px;
+    width: 150px;
+    margin: 0 auto;
 }
