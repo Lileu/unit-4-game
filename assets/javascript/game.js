@@ -1,22 +1,28 @@
-//$(document).ready(function() {
+
 // GLOBAL VARIABLES
 
 var currentScore = 0; //#progress-number
-var winScore = 0; //#goal-number
 var winCount = 0; //#win-count
 var lossCount = 0; //#loss-count
 
-var iconsArr = ["#crystal1","#crystal2","#crystal3","#crystal4"]  //
+var iconsArr = ["#crystal1","#crystal2","#crystal3","#crystal4"]  //icon IDs from html
 
-var goalValue = Math.floor(Math.random() * (120) + 19); //random "#goal-number"
-$("#goal-number").text(goalValue);  
-
-
-var crystalValuesArr = [Math.floor(Math.random() * (11) + 1), Math.floor(Math.random() * (11) + 1), Math.floor(Math.random() * (11) + 1), Math.floor(Math.random() * (11) + 1)];
+var goalValue = Math.floor(Math.random() * (120) + 19); //random "#goal-number" values between 19-120
+$("#goal-number").text(goalValue);  //update 'Goal number:' on UI
 
 
 // FUNCTIONS
 
+//reset game function
+var resetGame = function () {
+    //reset current score
+    currentScore = 0;
+    //update the 'Your Progress' number on UI
+    $("#progress-number").text(currentScore);
+
+//random crystal values between 1-12
+var crystalValuesArr = [Math.floor(Math.random() * (12) + 1), Math.floor(Math.random() * (12) + 1), Math.floor      (Math.random() * (11) + 1), Math.floor(Math.random() * (12) + 1)]; 
+    
 // For-loop to iterate through the crystal icons array.
 for (i = 0; i < crystalValuesArr.length; i++) {
 
@@ -46,11 +52,27 @@ for (i = 0; i < crystalValuesArr.length; i++) {
         crystalValue = parseInt(crystalValue);
         //add the crystal value to the current score
         currentScore += crystalValue;
-        //updating the 'Your Progress' number
+        //update the 'Your Progress' number on UI
         $("#progress-number").text(currentScore);
         //logging
         console.log(crystalValue);
         console.log(currentScore);
+
+        if (currentScore > winScore) {
+            alert("You lost this round... give it another go!");
+            //increase loss count variable
+            lossCount++;
+             //update the 'Losses:' number on UI   
+             $("#loss-count").text(lossCount);        
+        }
+        else if (currentScore === winScore) {
+            alert("Congrats! You won this round... see if you can do it again!");
+            //increase win count variable
+            winCount++;
+            //update the 'Wins:' number on UI
+            $("#win-count").text(winCount);
+
+        }
     })
 
-   
+}
