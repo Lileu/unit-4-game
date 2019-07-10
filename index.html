@@ -2,92 +2,112 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <script src="https://kit.fontawesome.com/16b6c2968f.js"></script>
+  <script src="https://kit.fontawesome.com/16b6c2968f.js"></script>
 
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <title>Crystals Collector Game</title>
+  <title>Crystals Collector Game</title>
 </head>
 
 <body>
 
+  <div class="jumbotron jumbotron-fluid text-center mdb-color lighten-2 white-text mx-2 mb-5">
+      <div class="row">
+          <div class="col-md-12">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+          <h1 class="display-4">Crystals Collector Game</h1>
+          <h2>Instructions</h2>
+          <br />
+          <p>You will be given a random number at the start of the game.</p>
+          <p>
+            There are four crystals below. By clicking on a crystal you will add
+            a specific amount of points to your total score.
+          </p>
+          <p>
+            You win the game by matching your total score to a random number.
+            You lose the game if your total score goes above the random number.
+          </p>
+          <p>
+            The value of each crystal is hidden from you until you click on it.
+          </p>
+          <p>
+            Each time the game starts, the values of each crystal will change as
+            well!
+          </p>
 
+          <hr class="my-4 rgba-white-light" />
+          <!-- Random goal number -->
+          <div>
+            Goal Number:
+            <span id="goal-number"></span>
+          </div>
+          <!-- Player count towards goal -->
+          <hr class="my-4 rgba-white-light" />
+          <div>
+            Your Progress:
+            <span id="progress-number"></span>
+          </div>
 
-    <div class="jumbotron jumbotron-fluid text-center mdb-color lighten-2 white-text mx-2 mb-5">
-        <div class="main-section">
-            <h1>Crystals Collector Game</h1>
+          <hr class="my-4 rgba-white-light" />
 
-            <div class="row">
-                <div class="col-md-12 instructions">
-                    <h2>Instructions</h2>
-                    <br>
-                    <p>You will be given a random number at the start of the game.</p>
-                    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of
-                        points
-                        to your total score.</p>
-                    <p>You win the game by matching your total score to a random number. You lose the game if
-                        your total
-                        score goes above the random number.</p>
-                    <p>The value of each crystal is hidden from you until you click on it.</p>
-                    <p>Each time the game starts, the values of each crystal will change as well!</p>
-
-                    <hr class="my-4 rgba-white-light">
-                    <!-- Random goal number -->
-                    <div>Goal Number:
-                        <span id="goal-number"></span>
-                    </div>
-                    <!-- Player count towards goal -->
-                    <hr class="my-4 rgba-white-light">
-                    <div>Your Progress:
-                        <span id="progress-number"></span>
-                    </div>
-
-                    <hr class="my-4 rgba-white-light">
-
-                    <!-- Wins/Losses counters -->
-                    <div class="row">
-                        <div class="col-md 6">
-                            <div>Wins:
-                                <span id="win-count"></span>
-                            </div>
-                        </div>
-                        <div class="col-md 6">
-                            <div> Losses:
-                                <span id="loss-count"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="my-4 rgba-white-light">
-
-                    <!-- row of crystals -->
-                    <div class="row">
-                        <div class="col-md-3"><i id="crystal1" class="far fa-gem fa-5x"></i></div>
-                        <div class="col-md-3"><i id="crystal2" class="far fa-gem fa-5x"></i></div>
-                        <div class="col-md-3"><i id="crystal3" class="far fa-gem fa-5x"></i></div>
-                        <div class="col-md-3"><i id="crystal4" class="far fa-gem fa-5x"></i></div>
-                    </div>
-                </div>
+          <!-- Wins/Losses counters -->
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                Wins:
+                <span id="win-count"></span>
+              </div>
             </div>
+            <div class="col-md-6">
+              <div>
+                Losses:
+                <span id="loss-count"></span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4 rgba-white-light" />
+
+          <!-- row of crystals -->
+          <div class="row">
+            <div class="col-md-3">
+              <span><i id="crystal3" class="far fa-gem fa-5x"></i></span>
+            </div>
+            <div class="col-md-3">
+              <span><i id="crystal4" class="far fa-gem fa-5x"></i></span>
+            </div>
+            <div class="col-md-3">
+              <span><i id="crystal2" class="far fa-gem fa-5x"></i></span>
+            </div>
+            <div class="col-md-3">
+              <span><i id="crystal1" class="far fa-gem fa-5x"></i></span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+
 
     <footer class="footer mt-auto py-3">
-        <div class="container">
-            <span class="text-muted">Week 4 homework</span>
-        </div>
+      <div class="container">
+
+      </div>
+        <span class="text-muted">Week 4 homework</span>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
