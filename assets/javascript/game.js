@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 // GLOBAL VARIABLES
 
 var currentScore = 0; //#progress-number
@@ -21,7 +21,8 @@ var resetGame = function () {
     $("#progress-number").text(currentScore);
 
 //random crystal values between 1-12
-var crystalValuesArr = [Math.floor(Math.random() * (12) + 1), Math.floor(Math.random() * (12) + 1), Math.floor      (Math.random() * (11) + 1), Math.floor(Math.random() * (12) + 1)]; 
+var crystalValuesArr = [Math.floor(Math.random() * (12) + 1), Math.floor(Math.random() * (12) + 1), 
+    Math.floor(Math.random() * (11) + 1), Math.floor(Math.random() * (12) + 1)]; 
     
 // For-loop to iterate through the crystal icons array.
 for (i = 0; i < crystalValuesArr.length; i++) {
@@ -32,7 +33,7 @@ for (i = 0; i < crystalValuesArr.length; i++) {
     crystalBtn.addClass("crystal-icon"); // assigning a new class
 
     // 4. Then give each "crystalBtn" a data-attribute called "data-crystalValue".
-    crystalBtn.attr("data-crystalValue", crystalValuesArr.length[i]);
+    crystalBtn.attr("data-crystalValue", crystalValuesArr[i]);
 
     // 6. Finally, append each "crystalBtn" to the ".far" div 
     $(".far").append(crystalBtn);
@@ -76,3 +77,6 @@ for (i = 0; i < crystalValuesArr.length; i++) {
     })
 
 }
+
+});
+

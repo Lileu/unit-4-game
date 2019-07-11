@@ -1,12 +1,17 @@
-body {
+body, html {
   font-family: "Roboto", sans-serif;
+  height: 100%;
   width: 100%;
   margin: 0;
+  background-image: URL('https://images.pexels.com/photos/56030/pyrite-pyrites-mineral-sulfide-56030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: black;
-}
+} 
 
+.container {
+  align-content: centre;
+}
 
 footer {
   position: fixed;
@@ -14,24 +19,29 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-
 }
 
-.jumbotron-fluid {
-  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+.card {
+  background-color: rgba(0,0,0,0.7) !important;
   align-items: center;
+  text-align: center;
   position: relative;
-  margin: 200px;
-}
-
-.container {
-  background:#fff; 
+  margin-top: 150px;
+  padding: 20px 20px 40px;
+  margin-bottom: auto;
   border-radius: 10px;
   box-shadow:15px 20px 0px rgba(0,0,0,0.1);
 }
 
+hr {
+  border-top: 1px solid rgba(242,241,241,0.5);
+}
+
+
+
 .fa-gem {
   opacity: 0.8;
+  margin: 5px;
 }
 
 #crystal1 {
