@@ -28,7 +28,7 @@ var startGame = function() {
     var crystalBtn = $("<i>");
     crystalBtn.addClass("crystal-icon far fa-gem fa-5x"); // assigning a new class
     //crystalBtn.addClass("far"); // assigning a new class
-    //crystalBtn.addClass("fa-gem fa-5x"); // assigning a new class
+    crystalBtn.addClass("fa-gem fa-5x"); // assigning a new class
 
     //crystalBtn.attr("src", iconsArr[i]);
     // 4. Then give each "crystalBtn" a data-attribute called "data-crystalValue".
