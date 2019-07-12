@@ -10,13 +10,17 @@ body, html {
   background-attachment: fixed;
 } 
 
+/* .stats {
+  font-size: 20px;
+} */
+
 .container {
   align-content: centre;
 }
 
 footer {
   position: fixed;
-  height: 100px;
+  height: 50px;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -27,7 +31,7 @@ footer {
   align-items: center;
   text-align: center;
   position: relative;
-  margin-top: 100px;
+  margin-top: 40px;
   padding: 20px 20px 40px;
   margin-bottom: auto;
   border-radius: 10px;
@@ -36,13 +40,6 @@ footer {
 
 hr {
   border-top: 1px solid rgba(242,241,241,0.5);
-}
-
-
-
-.fa-gem {
-  opacity: 0.8;
-  margin: 5px;
 }
 
 #crystal1 {
@@ -59,4 +56,8 @@ hr {
 
 #crystal4 {
   color: #ffbe00;
+}
+
+.crystalDiv {
+  justify-content: space-around;
 }

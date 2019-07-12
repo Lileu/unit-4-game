@@ -21,8 +21,8 @@ var startGame = function () {
         crystalBtn.attr("id", crystalIDs[i]);
         crystalBtn.attr("data-crystalValue", crystalValuesArr[i]);
 
-        crystalBtn.on("click", function () {
-            var crystalValue = crystalBtn.attr("data-crystalValue");
+        crystalBtn.on("click", function (clickEvent) {
+            var crystalValue = $("#" + clickEvent.target.id).attr("data-crystalValue");
             crystalValue = parseInt(crystalValue);
             currentScore += crystalValue;
             $("#progress-number").text(currentScore);
