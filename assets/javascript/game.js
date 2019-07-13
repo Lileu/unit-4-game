@@ -1,19 +1,19 @@
 // GLOBAL VARIABLES
+// =================================================================================
 var goalValue = 0; //"#goal-number
 var currentScore = 0; //#progress-number
 var winCount = 0; //#win-count
 var lossCount = 0; //#loss-count
-var crystalIDs = ["crystal1", "crystal2", "crystal3", "crystal4"]
+var crystalIDs = ["crystal1", "crystal2", "crystal3", "crystal4"] 
 var crystalValue = 0;
 var crystalValuesArr = [];
 
 // FUNCTIONS
 // =================================================================================
-// Start Game function
+// Start Game function - generate icons (inc classes and attributes), define game rules and outcomes, logging
 var startGame = function () {
     resetGame();
 
-    // For Loop to iterate through the crystal icons array and create the properties needed
     for (i = 0; i < crystalValuesArr.length; i++) {
 
         var crystalBtn = $("<i>");
@@ -22,7 +22,7 @@ var startGame = function () {
         crystalBtn.attr("data-crystalValue", crystalValuesArr[i]);
 
         crystalBtn.on("click", function (clickEvent) {
-            var crystalValue = $("#" + clickEvent.target.id).attr("data-crystalValue");
+            var crystalValue = $("#" + clickEvent.target.id).attr("data-crystalValue"); // jquery to directly target the required attribute
             crystalValue = parseInt(crystalValue);
             currentScore += crystalValue;
             $("#progress-number").text(currentScore);
@@ -53,8 +53,9 @@ var startGame = function () {
     console.log("-----------------------------------");
 };
 
+// Reset Game - generate random goal, reset current score, assign values to crystals
 var resetGame = function () {
-    // Randomly generated goal
+    
     goalValue = Math.floor(Math.random() * (120) + 19); 
     $("#goal-number").text(goalValue);
 
@@ -73,7 +74,6 @@ var setCrystalValues = function () {
 
 // MAIN PROCESS
 // =================================================================================
-
 $("#loss-count").text(lossCount);
 $("#win-count").text(winCount);
 startGame();

@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   font-family: "Roboto", sans-serif;
   height: 100%;
   width: 100%;
@@ -8,38 +9,39 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-} 
+}
 
-/* .stats {
-  font-size: 20px;
-} */
+h1 {
+  color: darkmagenta;
+}
 
 .container {
   align-content: centre;
 }
 
-footer {
-  position: fixed;
-  height: 50px;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
 
 .card {
-  background-color: rgba(0,0,0,0.7) !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
   align-items: center;
   text-align: center;
   position: relative;
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 20px 20px 40px;
   margin-bottom: auto;
   border-radius: 10px;
-  box-shadow:15px 20px 0px rgba(0,0,0,0.1);
+  box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  margin-top: 0;
+}
+
+.stats {
+  font-size: 20 px;
 }
 
 hr {
-  border-top: 1px solid rgba(242,241,241,0.5);
+  border-top: 1px solid rgba(242, 241, 241, 0.5);
 }
 
 #crystal1 {
